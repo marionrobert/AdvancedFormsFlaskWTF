@@ -2,10 +2,12 @@ from flask import Flask, render_template
 from flask_wtf import FlaskForm, Form
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
+from flask_bootstrap import Bootstrap
 
 import os
 
 app = Flask(__name__)
+Bootstrap(app)
 app.secret_key = os.environ["secret_key"]
 
 
